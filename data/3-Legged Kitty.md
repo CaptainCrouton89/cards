@@ -25,9 +25,39 @@ Each hand consists of three main phases:
 
 ## Phase 1: The Bidding Phase
 
-### Understanding Bids
+### How Bidding Works Mechanically
 
-Bids represent contracts - promises about how many tricks you'll take. There are six types of bids, and for each number (1-10), they rank from lowest to highest:
+**The key concept**: During bidding, you place cards from your hand face up in front of you. **These cards serve only as payment for your bid - their suit and value don't matter for bidding purposes!** You're essentially "spending" cards from your hand to bid.
+
+**Basic bidding process**:
+
+1. **Starting player**: The player to the dealer's left makes the first bid
+
+2. **Making a bid**:
+
+   - Place at least one card from your hand **FACE UP** in front of you
+   - Announce your bid (a number and a type, like "2 Hearts")
+   - These cards stay visible in front of you during the entire bidding phase
+
+3. **Raising the bid**:
+
+   - Each new bid must be higher than the previous bid
+   - If your bid number is the same or just one higher than the previous bid, place 1 card
+   - If your bid number jumps by more than one, place additional cards (one extra card for each number you skip)
+   - Example: Going from "3 Clubs" to "5 Spades" requires placing 2 cards
+
+4. **Passing**: You may pass instead of bidding, but once you pass, you cannot re-enter the bidding
+
+5. **Bidding ends**: When two players pass consecutively after someone's bid
+
+### Understanding What You're Bidding
+
+Bids represent contracts - promises about how many tricks you'll take (or won't take) during play. Each bid consists of:
+
+- **A number** (1 through 10)
+- **A type** (Null, Clubs, Diamonds, Hearts, Spades, or No Trump)
+
+There are six types of bids:
 
 **1. Null X** (where X is 1-8) - You promise to take NO MORE than (8-X) tricks
 
@@ -48,7 +78,7 @@ _Note: Null only goes up to 8. Null 9 and 10 don't exist since you can't take ne
 
 **6. X No Trump** - No trump suit, you promise to take AT LEAST X tricks
 
-### Bid Hierarchy Examples
+### Bid Hierarchy
 
 Bids are ranked first by **NUMBER**, then by **TYPE** within that number:
 
@@ -58,54 +88,30 @@ Within each number, the ranking is:
 
 - **Null** < **Clubs** < **Diamonds** < **Hearts** < **Spades** < **No Trump**
 
-**Some specific examples:**
+**Examples:**
 
 - "1 No Trump" beats "1 Spades" (same number, no trump ranks higher)
 - "2 Null" beats "1 No Trump" (2 beats 1, regardless of type)
 - "5 Spades" beats "5 Hearts" (same number, spades rank higher)
 - "7 Clubs" beats "6 No Trump" (7 beats 6, regardless of type)
 
-### How to Bid
-
-**1. Starting player**: The player to the dealer's left makes the first bid
-
-**2. Making a bid**:
-
-- Announce your bid (e.g., "1 Heart")
-- Place cards from your hand **FACE UP** in front of you
-- The number of cards should be the difference from the previous bid, but a minimum of 1
-- These cards stay in front of you during bidding
-
-**3. Continuing to bid**: Each bid must be higher than the previous bid
-
-**4. Passing**: You may pass, but you cannot re-enter bidding once you do
-
-**5. Bidding ends**: When one person bids and the other two players pass consecutively
-
-### Important Bidding Rules
-
-**The Card Payment System:**
-
-- Cards you bid are placed face up in front of you (visible to all)
-- When raising the bid, put in at least one card
-- If you are skipping bid tiers, put in an extra card for each tier you jump  
-  _(going from 3 clubs to 5 spades requires putting in two cards)_
-
 ### Complete Bidding Example
 
-Let's follow a full bidding round:
+Let's follow a full bidding round to see how the card placement works:
 
-1. **Alice** (first to bid): "1 Club" → places 1 card face up
-2. **Bob**: "1 Heart" → places 1 more card face up _(same number, but hearts beat clubs)_
-3. **Carol**: "2 No Trump" → places another card face up
-4. **Alice**: "3 Null" → adds 1 more card
-5. **Bob**: "5 Diamonds" → adds 2 cards in front of them
-6. **Carol**: "5 No Trump" → places 1 more card
+1. **Alice** (first to bid): Places 1 card face up, announces "1 Club"
+2. **Bob**: Places 1 card face up, announces "1 Heart" _(same number, but hearts beat clubs)_
+3. **Carol**: Places 1 card face up, announces "2 No Trump"
+4. **Alice**: Places 1 card face up, announces "3 Null"
+5. **Bob**: Places 2 cards face up, announces "5 Diamonds" _(jumping from 3 to 5 requires 2 cards)_
+6. **Carol**: Places 1 card face up, announces "5 No Trump"
 7. **Alice**: "Pass"
 8. **Bob**: "Pass"
 9. **Carol**: "Pass"
 
 **Result**: Carol wins with "5 No Trump" and becomes "the Cat". The hand will be played with no trump suit.
+
+**Remember**: The actual cards placed (their suits and values) have no connection to the bids made. A player could place the 2♣ while bidding "7 Spades" - the card is just payment!
 
 ### After Bidding Ends
 
@@ -114,17 +120,17 @@ Once someone wins the bid:
 1. They become "**the Cat**" for this round
 2. **ALL** cards that were bid (from all players) are collected into a central pile called "**the kitty**"
 3. _In our example: Alice's 2 cards + Bob's 3 cards + Carol's 3 cards = 8 cards in the kitty_
-4. The last bid determines the type of hand:
-   - If the last bid was **null** or **no trump** → the hand is a no trump hand
-   - If the last bid was a **suit** → that suit is trump for the rest of the hand
+4. The winning bid determines how the hand will be played:
+   - If the winning bid was **null** or **no trump** → the hand is played with no trump suit
+   - If the winning bid was a **suit** → that suit is trump for the hand
 
 ## Phase 2: Card Exchange
 
 This phase happens in a specific order, giving each player a chance to rebuild their hand to exactly 10 cards.
 
-**1. The Cat** picks up the kitty and adds it to their hand. They select 10 cards to keep, putting the rest back in to the center, face up. This becomes **the stray**.
+**1. The Cat** picks up the kitty and adds it to their hand. They select 10 cards to keep, putting the rest back in the center, face up. This becomes **the stray**.
 
-**2. Starting to the Cat's left**, the player chooses cards from the stray to add to their hand to bring it back up to 10. _(Note: they do not add all of them and choose 10—they can only draw.)_
+**2. Starting to the Cat's left**, the player chooses cards from the stray to add to their hand to bring it back up to 10. _(Note: they do not add all of them and choose 10—they can only draw enough to reach 10 cards.)_
 
 **3. The last player** adds the remaining cards to their hand, bringing them up to 10.
 
