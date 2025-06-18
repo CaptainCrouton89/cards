@@ -64,7 +64,7 @@ export default async function GamePage({ params }: GamePageProps) {
               <div className="flex items-center gap-4 mb-4">
                 <span className="text-6xl">🃏</span>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 bg-clip-text text-transparent">
+                  <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 bg-clip-text text-transparent break-words leading-tight">
                     {gameName}
                   </h1>
                   <p className="text-gray-500 dark:text-gray-400 mt-2">
@@ -79,27 +79,27 @@ export default async function GamePage({ params }: GamePageProps) {
                 remarkPlugins={[remarkGfm]}
                 components={{
                   h1: ({children}) => (
-                    <h1 className="text-4xl font-bold mt-10 mb-6 text-gray-900 dark:text-white border-b-2 border-purple-300 dark:border-purple-700 pb-4">
+                    <h1 className="text-4xl font-bold mt-6 mb-3 text-gray-900 dark:text-white border-b-2 border-purple-300 dark:border-purple-700 pb-2">
                       {children}
                     </h1>
                   ),
                   h2: ({children}) => (
-                    <h2 className="text-3xl font-semibold mt-8 mb-4 text-purple-700 dark:text-purple-400">
+                    <h2 className="text-3xl font-semibold mt-5 mb-2 text-purple-700 dark:text-purple-400">
                       {children}
                     </h2>
                   ),
                   h3: ({children}) => (
-                    <h3 className="text-2xl font-medium mt-6 mb-3 text-gray-800 dark:text-gray-200">
+                    <h3 className="text-2xl font-medium mt-4 mb-2 text-gray-800 dark:text-gray-200">
                       {children}
                     </h3>
                   ),
                   p: ({children}) => (
-                    <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-5">
+                    <p className="text-lg text-gray-700 dark:text-gray-300 leading-normal mb-3">
                       {children}
                     </p>
                   ),
                   strong: ({children}) => (
-                    <strong className="font-bold text-purple-700 dark:text-purple-400">
+                    <strong className="font-bold">
                       {children}
                     </strong>
                   ),
@@ -109,18 +109,18 @@ export default async function GamePage({ params }: GamePageProps) {
                     </em>
                   ),
                   ul: ({children}) => (
-                    <ul className="list-none space-y-3 mb-6 ml-4">
+                    <ul className="list-none mb-3 ml-4">
                       {children}
                     </ul>
                   ),
                   ol: ({children}) => (
-                    <ol className="list-decimal space-y-3 mb-6 ml-6 marker:text-purple-600 dark:marker:text-purple-400">
+                    <ol className="list-decimal mb-3 ml-6 marker:text-purple-600 dark:marker:text-purple-400">
                       {children}
                     </ol>
                   ),
                   li: ({children}) => (
-                    <li className="flex items-start text-lg text-gray-700 dark:text-gray-300">
-                      <span className="text-purple-600 dark:text-purple-400 mr-3 mt-1 flex-shrink-0">•</span>
+                    <li className="flex items-start text-lg text-gray-700 dark:text-gray-300 leading-tight mb-1">
+                      <span className="text-purple-600 dark:text-purple-400 mr-3 mt-0.5 flex-shrink-0">•</span>
                       <span className="flex-1">{children}</span>
                     </li>
                   ),
@@ -142,17 +142,17 @@ export default async function GamePage({ params }: GamePageProps) {
                     );
                   },
                   pre: ({children}) => (
-                    <pre className="bg-gray-100 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto mb-6">
+                    <pre className="bg-gray-100 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto mb-3">
                       {children}
                     </pre>
                   ),
                   blockquote: ({children}) => (
-                    <blockquote className="border-l-4 border-purple-500 pl-4 italic text-gray-700 dark:text-gray-300 my-6">
+                    <blockquote className="border-l-4 border-purple-500 pl-4 italic text-gray-700 dark:text-gray-300 my-3">
                       {children}
                     </blockquote>
                   ),
                   hr: () => (
-                    <hr className="border-gray-300 dark:border-gray-600 my-8" />
+                    <hr className="border-gray-300 dark:border-gray-600 my-4" />
                   ),
                 }}
               >
